@@ -5,10 +5,14 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import java.util.logging.Logger;
+
 public class Main {
 
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
+
     //todo: should generalize for a city passed as argument
-    private static final int CITY_ID_AVEIRO = 1010500;
+    // private static final int CITY_ID_AVEIRO = 1010500;
 
     public static void  main(String[] args ) {
 
@@ -19,10 +23,17 @@ public class Main {
                 .build();
 
         // create a typed interface to use the remote API (a client)
+        int cityCode = 0;
+        if (args.length == 0) {
+            logger.info( "Código de cidade inválido!");
+            System.exit(0);
+        } else{
+            cityCode = Integer.parseInt(args[0]);
+        }
+        
         IpmaService service = retrofit.create(IpmaService.class);
-        // prepare the call to remote endpoint
-        Call<IpmaCityForecast> callSync = service.getForecastForACity(CITY_ID_AVEIRO);
-
+        Call<IpmaCityForecast> callSync = service.getForecastForACity(cityCode);
+        
         try {
             Response<IpmaCityForecast> apiResponse = callSync.execute();
             IpmaCityForecast forecast = apiResponse.body();
