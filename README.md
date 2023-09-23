@@ -188,23 +188,23 @@ Links usados para criar os ficheiros:
 
 Exemplo do ficheiro
 
-<Configuration status="info">
-    <Appenders>
-        <Console name="sout" target="SYSTEM_OUT">
-            <PatternLayout pattern="[%p] %d{HH:mm:ss} %m%n \n"/>
-        </Console>
-        <File name="file" fileName="logs.log" append="true">
-            <PatternLayout pattern="[%p] %d{HH:mm:ss} %m%n \n">
-            </PatternLayout>
-        </File>
-    </Appenders>
-    <Loggers>
-        <Root level="info">
-            <AppenderRef ref="sout"/>
-            <AppenderRef ref="file"/>
-        </Root>
-    </Loggers>
-</Configuration>
+    ```<Configuration status="info">
+        <Appenders>
+            <Console name="sout" target="SYSTEM_OUT">
+                <PatternLayout pattern="[%p] %d{HH:mm:ss} %m%n \n"/>
+            </Console>
+            <File name="file" fileName="logs.log" append="true">
+                <PatternLayout pattern="[%p] %d{HH:mm:ss} %m%n \n">
+                </PatternLayout>
+            </File>
+        </Appenders>
+        <Loggers>
+            <Root level="info">
+                <AppenderRef ref="sout"/>
+                <AppenderRef ref="file"/>
+            </Root>
+        </Loggers>
+    </Configuration>```
 
 Para dar commit a partir desta nova localização (simulando a existência de mais do que um colaborador para o projeto) foram usados os comandos descritos no início.
 
@@ -270,21 +270,21 @@ Usar o docker compose consiste em 3 processos:
 
 Exemplo de um ficheiro docker-compose.yml
 
-version: "3.9"  # optional since v1.27.0
-services:
-  web:
-    build: .
-    ports:
-      - "5000:5000"
+    version: "3.9"  # optional since v1.27.0
+    services:
+    web:
+        build: .
+        ports:
+        - "5000:5000"
+        volumes:
+        - .:/code
+        - logvolume01:/var/log
+        links:
+        - redis
+    redis:
+        image: redis
     volumes:
-      - .:/code
-      - logvolume01:/var/log
-    links:
-      - redis
-  redis:
-    image: redis
-volumes:
-  logvolume01: {}
+    logvolume01: {}
 
 
 
@@ -293,10 +293,10 @@ volumes:
 Foram criados dois projetos, o projeto 2 é constituído pelas classes de suporto do exercício 2 e o porjeto 1 é constituído pela main que é dependente das outras classes.
 
 Esta dependência deve ser adicionada ao ficheiro pom.xml do projeto 1, anycityforecast.
-    <dependency>
+    ```<dependency>
       <groupId>com.ies</groupId>
       <artifactId>ipmaapiclient</artifactId>
       <version>1.0-SNAPSHOT</version>
-    </dependency>
+    </dependency>```
     
 Sendo o ipmaapiclient o projeto 2.
