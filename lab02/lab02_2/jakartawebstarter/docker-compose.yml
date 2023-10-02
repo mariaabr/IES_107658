@@ -1,0 +1,29 @@
+# version: '3'
+
+# services:
+#   tomcat:
+#     image: tomcat:9.0.80-jdk11-corretto-al2
+#     ports:
+#       - "8080:8080"  #porta 8080 do container para a porta 8080 do host
+#     volumes:
+#       - ./target/jakartawebstarter-1.0-SNAPSHOT.war:/usr/local/tomcat/webapps/jakartawebstarter-1.0-SNAPSHOT.war
+
+# version: '3'
+# services:
+#   tomcat:
+#     image: tomcat:9.0
+#     ports:
+#       - "8080:8080"
+#     volumes:
+#       - ./target/jakartawebstarter-1.0-SNAPSHOT.war:/usr/local/tomcat/webapps/jakartawebstarter-1.0-SNAPSHOT.war
+#     environment:
+#       - JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom
+
+version: '3'
+services:
+  tomcat:
+    image: tomcat:10-jre11-openjdk-slim
+    ports:
+     - "8080:8080"
+    volumes:
+      - ./target/jakartawebstarter-1.0-SNAPSHOT.war:/usr/local/tomcat/webapps/jakartawebstarter-1.0-SNAPSHOT.war
