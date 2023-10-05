@@ -4,7 +4,6 @@ public class Movie {
     
     private final int id;
     private final String movie;
-    // private final String character;
     private final String quote;
 
     public Movie(int id, String movie, String quote){
@@ -14,14 +13,14 @@ public class Movie {
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public String getMovie() {
-        return this.movie;
+        return movie;
     }
 
     public String getQuote() {
-        return this.quote;
+        return quote;
     }
 }
