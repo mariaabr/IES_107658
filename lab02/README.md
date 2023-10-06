@@ -246,8 +246,9 @@ Em vez de se usar a anotação @Controller passa-se a usar a @RestController. É
 
 O objetivo é criar um serviço web (Rest API) para oferecer quotes aleatórias de filmes/séries, tendo em conta que todas as respostas devem estar formatadas em JSON.
 
-Method | Path                      | Description
-GET    | api/quote                 | Returns a random quote (show not specified).
-GET    | api/shows                 | List of all available shows (for which some quote exists). For 
-convenience, a show should have some identifier/code.
-GET    | api/quotes?show=<show_id> | Returns the existing quotes for the specified show/film
+
+| Method | Path                      | Description |
+| GET    | api/quote                 | Returns a random quote (show not specified). |
+| GET    | api/shows                 | List of all available shows (for which some quote exists). For 
+convenience, a show should have some identifier/code. |
+| GET    | api/quotes?show=<show_id> | Returns the existing quotes for the specified show/film. |
