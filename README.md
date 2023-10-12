@@ -23,7 +23,7 @@
     Exame TP
     
 ### Regente (professor TP):
-    João Rafaela ALmeida
+    João Rafael ALmeida
 
 ### Professor P:
     Luís Bastião
