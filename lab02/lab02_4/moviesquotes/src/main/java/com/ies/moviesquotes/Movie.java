@@ -1,4 +1,4 @@
-package com.ies.servingwebcontent;
+package com.ies.moviesquotes;
 
 public class Movie {
     

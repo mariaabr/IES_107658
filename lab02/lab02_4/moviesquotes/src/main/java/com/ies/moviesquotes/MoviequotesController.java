@@ -1,4 +1,4 @@
-package com.ies.servingwebcontent;
+package com.ies.moviesquotes;
 
 // import java.util.concurrent.atomic.AtomicLong;
 import java.util.Random;
