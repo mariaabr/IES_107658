@@ -171,7 +171,8 @@ Foi adicionado também um novo método para efetuar a pesquisa de um employee po
     public Employee findByEmailId(@Param("emailId") String emailId);
 
 E no Controller foi adicionado um novo url:
-    @GetMapping("/employees/{id}") //search an employee by email
+
+    ``@GetMapping("/employees/{id}") //search an employee by email
     public ResponseEntity<Employee> getEmployeeById(@PathVariable(value = "id") Long employeeId){
         for(Employee employee : employeeRepository.findAll()){
             if(employee.getId()== employeeId){
@@ -181,7 +182,7 @@ E no Controller foi adicionado um novo url:
 
         System.out.println("Employee not found for this id :: " + employeeId);
         return null;
-    }
+    }``
 
 **Nota: não foram colocados prints uma vez que deu um erro que não consegui resolver e não me permitiu executar o exercício**
 
