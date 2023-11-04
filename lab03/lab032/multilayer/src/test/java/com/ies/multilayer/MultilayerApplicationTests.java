@@ -1,10 +1,10 @@
-package com.ies.lab03_2;
+package com.ies.multilayer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Lab032ApplicationTests {
+class MultilayerApplicationTests {
 
 	@Test
 	void contextLoads() {

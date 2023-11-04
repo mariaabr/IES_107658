@@ -1,13 +1,13 @@
-package com.ies.lab03_2;
+package com.ies.multilayer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Lab032Application {
+public class MultilayerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Lab032Application.class, args);
+		SpringApplication.run(MultilayerApplication.class, args);
 	}
 
 }
