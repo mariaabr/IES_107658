@@ -184,6 +184,21 @@ E no Controller foi adicionado um novo url:
         return null;
     }``
 
+**POST de um employee**
+<p align="center">
+  <img src="prints/ex2/post.png" width="95%" height="320">
+</p>
+
+**GET de um employee pelo seu email**
+<p align="center">
+  <img src="prints/ex2/getmail.png" width="95%" height="320">
+</p>
+
+**GET de todos os employees**
+<p align="center">
+  <img src="prints/ex2/getall.png" width="95%" height="320">
+</p>
+
 **Nota: não foram colocados prints uma vez que deu um erro que não consegui resolver e não me permitiu executar o exercício**
 
 ### Wrapping-up and integrating concepts - lab03_3
