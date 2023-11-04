@@ -15,7 +15,7 @@ import com.ies.movies.service.QuoteService;
 
 @RestController
 @AllArgsConstructor
-public class MoviesquotesController {
+public class MoviequotesController {
 
     private MovieService movieService;
     private QuoteService quoteService;
@@ -26,7 +26,6 @@ public class MoviesquotesController {
        Movie new_movie = movieService.createNewMovie(movie);
        return new ResponseEntity<>(new_movie, HttpStatus.CREATED);
    }
-
 
     // add a quote
     @PostMapping("/quote")
